@@ -1,0 +1,23 @@
+{
+  "name": "hydra-wall-street-library",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @hydra-ws/core && npm run build -w @hydra-ws/market-config && npm run build -w @hydra-ws/adapters-alpaca && npm run build -w @hydra-ws/hydra-connector && npm run build -w @hydra-ws/anchoring && npm run build -w @hydra-ws/sdk && npm run build -w engine-server && npm run build -w anchoring-server && npm run build -w web",
+    "demo": "npm run dev -w web",
+    "engine": "npm run start -w engine-server -- --port 8080 --markets 'markets/*' --anchor",
+    "test": "node --test packages/hydra-connector/test/*.test.mjs packages/market-config/test/*.test.mjs",
+    "scenario": "node examples/scenario-trade.mjs",
+    "anchor:once": "node examples/anchor-once.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.1",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

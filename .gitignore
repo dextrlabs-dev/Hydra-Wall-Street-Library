@@ -1,0 +1,25 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+.DS_Store
+coverage/
+
+# Python / local installs
+.venv/
+**/.pytest_cache/
+**/hydra_ws_sdk.egg-info/
+*.egg-info/
+
+# Regenerated transcripts (optional local captures)
+docs/development/logs/*.log
+
+# Assistant / editor tooling (local only)
+.cursor/
+.cursorrules
+.cursorignore
+.agents/
+.claude/
+.aider*
+.continue/
