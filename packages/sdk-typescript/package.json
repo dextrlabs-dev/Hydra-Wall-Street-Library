@@ -1,0 +1,23 @@
+{
+  "name": "@hydra-ws/sdk",
+  "version": "0.1.0",
+  "description": "Hydra Wall Street Library TypeScript SDK",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@hydra-ws/core": "file:../core",
+    "@hydra-ws/adapters-alpaca": "file:../adapters-alpaca",
+    "@hydra-ws/hydra-connector": "file:../hydra-connector"
+  },
+  "license": "MIT"
+}
