@@ -8,6 +8,8 @@ coverage/
 
 # Python / local installs
 .venv/
+**/__pycache__/
+*.pyc
 **/.pytest_cache/
 **/hydra_ws_sdk.egg-info/
 *.egg-info/
