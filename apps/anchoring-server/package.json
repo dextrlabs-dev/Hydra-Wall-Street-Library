@@ -1,0 +1,20 @@
+{
+  "name": "anchoring-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/server.js",
+  "bin": {
+    "anchoring-server": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@hydra-ws/anchoring": "file:../../packages/anchoring",
+    "@hydra-ws/hydra-connector": "file:../../packages/hydra-connector",
+    "fastify": "^5.1.0"
+  },
+  "license": "MIT"
+}

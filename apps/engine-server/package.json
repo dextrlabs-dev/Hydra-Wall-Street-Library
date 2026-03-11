@@ -1,0 +1,27 @@
+{
+  "name": "engine-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/server.js",
+  "bin": {
+    "engine-server": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@hydra-ws/anchoring": "file:../../packages/anchoring",
+    "@hydra-ws/core": "file:../../packages/core",
+    "@hydra-ws/hydra-connector": "file:../../packages/hydra-connector",
+    "@hydra-ws/market-config": "file:../../packages/market-config",
+    "fastify": "^5.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.13"
+  },
+  "license": "MIT"
+}

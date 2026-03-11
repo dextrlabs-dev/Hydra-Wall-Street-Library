@@ -1,0 +1,240 @@
+:root {
+  color-scheme: dark;
+  --bg: #0a0d12;
+  --panel: #131a23;
+  --panel-2: #0d1219;
+  --text: #e8ecf1;
+  --muted: #8b97a8;
+  --accent: #3dd6c6;
+  --warn: #f0b755;
+  --error: #ef6b73;
+  font-family: "Instrument Sans", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(900px 500px at 0% -10%, #1a2434 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+.root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hdr h1 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 1.6rem;
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+}
+
+.banner {
+  background: rgba(239, 107, 115, 0.16);
+  color: var(--error);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.panel h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+select,
+input,
+button {
+  font: inherit;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(160deg, #2a3d45, #1e2a32);
+  border-color: rgba(61, 214, 198, 0.35);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.server-settings {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.server-settings input {
+  min-width: 220px;
+}
+
+.order-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.order-form button[type="submit"] {
+  grid-column: span 2;
+}
+
+.order-form .cancel {
+  grid-column: span 2;
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.order-form .cancel legend {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.book {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.book table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+}
+
+.book th,
+.book td {
+  padding: 0.2rem 0.4rem;
+  text-align: right;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.tape {
+  margin: 0;
+  padding-left: 1rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  max-height: 240px;
+  overflow: auto;
+}
+
+.tape time {
+  color: var(--muted);
+}
+
+.pnl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+  margin: 0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.pnl > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.pnl dt {
+  color: var(--muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pnl dd {
+  margin: 0;
+  font-size: 1rem;
+}
+
+pre {
+  margin: 0;
+  padding: 0.75rem;
+  background: var(--panel-2);
+  border-radius: 8px;
+  overflow: auto;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  max-height: 240px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .book {
+    grid-template-columns: 1fr;
+  }
+}
