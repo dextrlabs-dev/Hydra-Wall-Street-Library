@@ -1,0 +1,11 @@
+{
+  "symbol": "BTCUSDT",
+  "asset_class": "crypto",
+  "tick_size": 1,
+  "lot_size": 1,
+  "trading_hours": [
+    { "open": "00:00", "close": "23:59", "tz": "UTC" }
+  ],
+  "holidays": [],
+  "halts": []
+}

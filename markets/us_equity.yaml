@@ -1,0 +1,14 @@
+# Template for US-listed equities. Runtime may override `symbol` to match the stream.
+symbol: SPY
+asset_class: equity
+tick_size: 1
+lot_size: 1
+trading_hours:
+  - open: "09:30"
+    close: "16:00"
+    tz: America/New_York
+holidays:
+  - "2026-01-01"
+  - "2026-07-03"
+  - "2026-12-25"
+halts: []
