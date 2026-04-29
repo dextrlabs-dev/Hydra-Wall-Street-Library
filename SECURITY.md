@@ -4,7 +4,7 @@
 
 This project never hardcodes Alpaca credentials. They are read from `.env` only.
 
-If your **Alpaca paper** key (`APCA_API_KEY_ID`) and secret (`APCA_API_SECRET_KEY`) have been visible in a screenshot, terminal share, or commit, treat them as **compromised**:
+If your **Alpaca paper** key (`APCA_API_KEY_ID`) and secret (`APCA_API_SECRET_KEY`) have been visible in a screenshot, terminal share, or commit, treat them as **compromised**. The same applies to keys pasted into **MCP client config** (for example `~/.cursor/mcp.json`): that file is outside this repo but is still sensitive if it contains literals.
 
 1. Open the [Alpaca dashboard](https://app.alpaca.markets/) → **Paper Trading** → **API Keys**.
 2. **Revoke** the exposed pair and **generate** a new one.

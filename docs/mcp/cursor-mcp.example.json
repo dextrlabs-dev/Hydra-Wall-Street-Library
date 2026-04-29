@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "alpaca-official": {
+      "command": "uvx",
+      "args": ["alpaca-mcp-server"],
+      "env": {
+        "ALPACA_API_KEY": "REPLACE_WITH_KEY_ID",
+        "ALPACA_SECRET_KEY": "REPLACE_WITH_SECRET",
+        "ALPACA_PAPER_TRADE": "true"
+      }
+    },
+    "hydra-wall-street": {
+      "command": "node",
+      "args": ["REPLACE_WITH_REPO_ROOT/apps/hydra-ws-mcp/dist/main.js"],
+      "env": {
+        "ENGINE_BASE_URL": "http://127.0.0.1:8080",
+        "APCA_API_KEY_ID": "REPLACE_WITH_KEY_ID",
+        "APCA_API_SECRET_KEY": "REPLACE_WITH_SECRET",
+        "ALPACA_PAPER": "true"
+      }
+    }
+  }
+}

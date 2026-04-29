@@ -11,6 +11,12 @@ Deterministic financial execution simulation:
 - engine-server (Fastify + WebSocket), React UI, and Python SDK with embedded backtest matcher,
 - reproducible Docker images and a GitHub Actions CI pipeline.
 
+**Primary project path on this machine (large disk):**
+
+`/mnt/volume_blr1_1777391751889/Hydra-Wall-Street-Library`
+
+Keep builds and `node_modules` on that volume if root (`/`) is full.
+
 ## Workspace layout
 
 | Path | Purpose |
@@ -25,8 +31,9 @@ Deterministic financial execution simulation:
 | `apps/engine-server` | Fastify + `ws` engine server (`/orders`, `/book`, `/metrics`, `/stream/:symbol`) |
 | `apps/anchoring-server` | Fastify anchoring server (`/anchor`, `/verify/:hash`, `/metrics`) |
 | `apps/web` | Vite + React UI: order entry, L2 book, trade tape, P&L, metrics |
-| `markets/` | Sample YAML/JSON market configurations (AAPL, BTCUSDT, us_equity) |
-| `examples/` | `scenario-trade.mjs`, `anchor-once.mjs`, `alpaca-account.mjs`, `hydra-connect.mjs`, `btc-paper-hft-sim.mjs`, `equity-paper-hft-sim.mjs` |
+| `apps/hydra-ws-mcp` | stdio MCP server: `engine-server` REST + optional Alpaca REST ([`docs/mcp/SETUP.md`](./docs/mcp/SETUP.md)) |
+| `markets/` | Sample YAML/JSON market configurations (AAPL, BTCUSDT) |
+| `examples/` | `scenario-trade.mjs`, `anchor-once.mjs`, `alpaca-account.mjs`, `hydra-connect.mjs`, `btc-paper-hft-sim.mjs` |
 | `docs/` | Deep dive: [`HYDRA_WALL_STREET_LIBRARY_DEEP_DIVE.md`](./docs/HYDRA_WALL_STREET_LIBRARY_DEEP_DIVE.md) |
 
 ## Prerequisites
@@ -59,6 +66,13 @@ npm run demo                       # http://localhost:5173
 
 If you previously shared your Alpaca paper key/secret in a screenshot, see
 [`SECURITY.md`](./SECURITY.md) and rotate them first.
+
+## MCP (Cursor / VS Code)
+
+- **Official Alpaca MCP** (`uvx alpaca-mcp-server`): broad Trading API tools; set `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` in the client config.
+- **This repo (`hydra-ws-mcp`)**: tools for the **local** matching engine plus the same Alpaca REST surface as `@hydra-ws/adapters-alpaca` when `APCA_*` (or `ALPACA_*`) env vars are set.
+
+Full steps, Cursor snippets, and a copy-paste example live in [`docs/mcp/SETUP.md`](./docs/mcp/SETUP.md).
 
 ## Docker
 

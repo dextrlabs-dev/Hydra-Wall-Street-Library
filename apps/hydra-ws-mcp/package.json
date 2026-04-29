@@ -1,0 +1,24 @@
+{
+  "name": "hydra-ws-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP stdio server: Hydra engine-server REST + optional Alpaca Trading REST (same credentials as @hydra-ws/adapters-alpaca)",
+  "bin": {
+    "hydra-ws-mcp": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@hydra-ws/adapters-alpaca": "file:../../packages/adapters-alpaca",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "license": "MIT"
+}

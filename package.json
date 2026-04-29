@@ -6,7 +6,7 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "npm run build -w @hydra-ws/core && npm run build -w @hydra-ws/market-config && npm run build -w @hydra-ws/adapters-alpaca && npm run build -w @hydra-ws/hydra-connector && npm run build -w @hydra-ws/anchoring && npm run build -w @hydra-ws/sdk && npm run build -w engine-server && npm run build -w anchoring-server && npm run build -w web",
+    "build": "npm run build -w @hydra-ws/core && npm run build -w @hydra-ws/market-config && npm run build -w @hydra-ws/adapters-alpaca && npm run build -w @hydra-ws/hydra-connector && npm run build -w @hydra-ws/anchoring && npm run build -w @hydra-ws/sdk && npm run build -w engine-server && npm run build -w anchoring-server && npm run build -w hydra-ws-mcp && npm run build -w web",
     "demo": "npm run dev -w web",
     "engine": "npm run start -w engine-server -- --port 8080 --markets 'markets/*' --anchor",
     "test": "node --test packages/hydra-connector/test/*.test.mjs packages/market-config/test/*.test.mjs",
