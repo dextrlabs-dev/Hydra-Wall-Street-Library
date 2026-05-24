@@ -1,6 +1,6 @@
 {
   "name": "@hydra-ws/anchoring",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Periodic Hydra anchoring of engine state hashes with verification index",
   "type": "module",
   "main": "./dist/index.js",

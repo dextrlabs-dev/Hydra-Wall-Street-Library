@@ -1,0 +1,61 @@
+site_name: Hydra Wall Street Library
+site_description: Deterministic financial execution simulation — price-time matching engine, hash-chained event log, Hydra-anchored state.
+site_url: https://dextrlabs-dev.github.io/Hydra-Wall-Street-Library/
+repo_url: https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library
+repo_name: dextrlabs-dev/Hydra-Wall-Street-Library
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Overview:
+      - Deep Dive: HYDRA_WALL_STREET_LIBRARY_DEEP_DIVE.md
+  - Beta Feedback: BETA_FEEDBACK.md
+  - Security:
+      - Threat Model: THREAT_MODEL.md
+  - Operations:
+      - Runbook: RUNBOOK.md
+  - Stability:
+      - Fuzz Report: FUZZ_REPORT.md
+  - MCP:
+      - Setup: mcp/SETUP.md

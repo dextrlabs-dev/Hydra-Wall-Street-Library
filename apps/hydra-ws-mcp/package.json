@@ -1,6 +1,6 @@
 {
   "name": "hydra-ws-mcp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "description": "MCP stdio server: Hydra engine-server REST + optional Alpaca Trading REST (same credentials as @hydra-ws/adapters-alpaca)",

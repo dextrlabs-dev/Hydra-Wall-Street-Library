@@ -1,6 +1,6 @@
 {
   "name": "@hydra-ws/market-config",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "YAML/JSON market configuration loader: tick size, lot size, trading hours, halts, holidays",
   "type": "module",
   "main": "./dist/index.js",

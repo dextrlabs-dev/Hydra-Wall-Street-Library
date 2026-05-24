@@ -1,6 +1,19 @@
 # Hydra Wall Street Library
 
-[![CI](https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library/actions/workflows/ci.yml/badge.svg)](./.github/workflows/ci.yml)
+[![CI](https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library/actions/workflows/ci.yml/badge.svg)](https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library/actions/workflows/ci.yml)
+[![Docs](https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library/actions/workflows/docs.yml/badge.svg)](https://dextrlabs-dev.github.io/Hydra-Wall-Street-Library/)
+[![Release](https://img.shields.io/github/v/release/dextrlabs-dev/Hydra-Wall-Street-Library?include_prereleases&display_name=tag)](https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library/releases)
+
+## v1.0.0 evidence package
+
+| Resource | URL |
+|---|---|
+| Documentation site (GitHub Pages) | [dextrlabs-dev.github.io/Hydra-Wall-Street-Library](https://dextrlabs-dev.github.io/Hydra-Wall-Street-Library/) |
+| Beta Feedback Resolution | [docs/BETA_FEEDBACK.md](./docs/BETA_FEEDBACK.md) |
+| Threat Model | [docs/THREAT_MODEL.md](./docs/THREAT_MODEL.md) |
+| Fuzz / Stability Report | [docs/FUZZ_REPORT.md](./docs/FUZZ_REPORT.md) |
+| Operations Runbook | [docs/RUNBOOK.md](./docs/RUNBOOK.md) |
+| Releases | [GitHub Releases](https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library/releases) |
 
 Deterministic financial execution simulation:
 
