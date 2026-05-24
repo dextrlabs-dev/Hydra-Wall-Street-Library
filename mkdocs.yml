@@ -1,5 +1,5 @@
 site_name: Hydra Wall Street Library
-site_description: Deterministic financial execution simulation — price-time matching engine, hash-chained event log, Hydra-anchored state.
+site_description: Deterministic financial execution simulation — price-time matching engine, hash-chained event log, Hydra-anchored state. v1.0.0.
 site_url: https://dextrlabs-dev.github.io/Hydra-Wall-Street-Library/
 repo_url: https://github.com/dextrlabs-dev/Hydra-Wall-Street-Library
 repo_name: dextrlabs-dev/Hydra-Wall-Street-Library
