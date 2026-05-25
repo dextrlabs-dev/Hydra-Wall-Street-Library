@@ -20,6 +20,12 @@ coverage/
 # Regenerated transcripts (optional local captures)
 docs/development/logs/*.log
 
+# Demo video + recording automation (kept local only, never committed)
+demo/
+scripts/demo/
+*.webm
+*.mp4
+
 # Assistant / editor tooling (local only)
 .cursor/
 .cursorrules
